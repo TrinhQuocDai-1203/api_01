@@ -3,13 +3,13 @@ using System.Diagnostics;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Endpoint trả về Hello World
+
 app.MapGet("/hello", () => "Hello World");
 
-// URL bạn muốn tự mở
+//cổng chạy
 var url = "http://localhost:5170/hello";
 
-// Khi ứng dụng start thì mở trình duyệt
+// chạy thì sẽ bật web lên
 app.Lifetime.ApplicationStarted.Register(() =>
 {
     try
